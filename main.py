@@ -71,7 +71,7 @@ def reconstruct(bs:bytes, width:int, height:int, bit_depth:int = 1) -> PIL.Image
     return ToReturn
 
 
-depth = 4
+depth = 1
 data = compress(r"C:\Users\timh\Downloads\sample.jpg", depth)
 print(data)
 print(len(data))
