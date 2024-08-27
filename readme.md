@@ -25,7 +25,7 @@ img.show()
     - A bit depth of 4 means there are 16 unique shades each pixel can have (2^4=16).
     - A bit depth of 2 means there are 4 unique shades each pixel can have (2^2=4).
     - A bit depth of 1 means there are 2 unique shades each pixel can have (2^1=2). *A bit depth of 1 just means each pixel will only be presented on "dark" or "light"*.
-- Once the pixel's monochrome value is scaled to a smaller value, within the confines of the maxiumum determined by the bit depth, it is then encoded as a number of bits (think of these as True/False values) (*the number of bits it is encoded is is the bit depth!*)
+- Once the pixel's monochrome value is scaled to a smaller value, within the confines of the maximum determined by the bit depth, it is then encoded as a number of bits (think of these as True/False values) (*the number of bits it is encoded is is the bit depth!*)
 - These bits are piled onto the remaining chain of bits. 
 - These bits are converted into a series of byte values that represent this image.
 
@@ -37,5 +37,5 @@ This lossy image compression can drastically decrease the binary footprint of an
 
 However, please keep in mind, **a lot of fidelity is lost in this process**. Especially at small bit-depths, the resulting image may be unrecognizable. Please perform testing to find the right balance between compression and quality.
 
-## How an Image is Reconstructured
+## How an Image is Reconstructed
 The process of going from the compressed image bytes and an image is the same process as described above, but in reverse. Each pixel's bit representation (determined by bit depth) is used to determine the monochrome shade (between 0 and 255) of each pixel. 
